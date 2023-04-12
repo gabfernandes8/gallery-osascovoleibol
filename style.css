@@ -134,6 +134,9 @@ span + span{
     opacity: 0;
     color: #ffffff;
     border-radius: 0px 0px 10px 10px;
+    display: grid;
+    text-align: center;
+    place-items: center;
 }
 
 .fotos:hover > .foto__info{
