@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border-radius: 10px;
 }
 
 body{   
@@ -26,7 +27,14 @@ h1{
     align-items: center;
 }
 
-span
+span{
+    color: red;
+}
+
+span + span{
+    color: black;
+    text-decoration: underline;
+}
 
 .galeria{
     height: 100%;
@@ -42,9 +50,17 @@ span
 .fotos{
     position: relative;
     box-shadow: 0px 0px 4px black;
-    background-color: aqua;
     cursor: pointer;
     overflow: hidden;
+    justify-content: center;
+    font-size: 15px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.fotos:hover{
+    scale: 1.1;
 }
 
 .fotos:nth-child(1){
@@ -96,6 +112,10 @@ span
     background-position: center;
 }
 
+#mundial{
+    height: 50px;
+}
+
 .fotos:nth-child(8){
     grid-area: f8;
     background-image: url(./img/oz-pretoroxo.jpg);
@@ -106,18 +126,43 @@ span
 .foto__info{
     position: absolute;
     width: 100%;
-    height: 36px;
+    height: 33px;
     bottom: 0;
     background-color: #0009;
     transform: translateY(100%);
     transition: 0.5s;
     opacity: 0;
     color: #ffffff;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .fotos:hover > .foto__info{
     transform: translateY(0%);
     opacity: 1;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials-container{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link{
+    display: flex;
+    width: 30px;
+    height: 30px;
+}
+
+.socials-container img:hover{
+    transform: scale(1.3);
+    transition-duration: .3s;
 }
 
 @media (max-width:768px){
