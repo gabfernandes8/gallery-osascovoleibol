@@ -59,10 +59,6 @@ span + span{
     justify-content: center;
 }
 
-.fotos:hover{
-    scale: 1.1;
-}
-
 .fotos:nth-child(1){
     grid-area: f1;
     background-image: url(./img/oz-poster.jpg);
